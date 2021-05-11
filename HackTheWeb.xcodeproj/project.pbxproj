@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		DDC02A542638384C007034A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC02A522638384C007034A6 /* Main.storyboard */; };
 		DDC02A562638384D007034A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC02A552638384D007034A6 /* Assets.xcassets */; };
 		DDC02A592638384D007034A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC02A572638384D007034A6 /* LaunchScreen.storyboard */; };
+		DDC02A6B26384CBA007034A6 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = DDC02A6A26384CBA007034A6 /* SwiftSoup */; };
+		DDC02A6E26384D1C007034A6 /* GmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC02A6D26384D1C007034A6 /* GmailResponse.swift */; };
+		DDC02A7126384D38007034A6 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC02A7026384D38007034A6 /* Email.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		DDC02A552638384D007034A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDC02A582638384D007034A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDC02A5A2638384D007034A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC02A6D26384D1C007034A6 /* GmailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GmailResponse.swift; sourceTree = "<group>"; };
+		DDC02A7026384D38007034A6 /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC02A6B26384CBA007034A6 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +67,9 @@
 				DDC02A502638384C007034A6 /* ViewController.swift */,
 				DDC02A522638384C007034A6 /* Main.storyboard */,
 				DDC02A552638384D007034A6 /* Assets.xcassets */,
+				DDC02A6D26384D1C007034A6 /* GmailResponse.swift */,
 				DDC02A572638384D007034A6 /* LaunchScreen.storyboard */,
+				DDC02A7026384D38007034A6 /* Email.swift */,
 				DDC02A5A2638384D007034A6 /* Info.plist */,
 			);
 			path = HackTheWeb;
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = HackTheWeb;
+			packageProductDependencies = (
+				DDC02A6A26384CBA007034A6 /* SwiftSoup */,
+			);
 			productName = HackTheWeb;
 			productReference = DDC02A492638384C007034A6 /* HackTheWeb.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +121,9 @@
 				Base,
 			);
 			mainGroup = DDC02A402638384C007034A6;
+			packageReferences = (
+				DDC02A6926384CBA007034A6 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = DDC02A4A2638384C007034A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC02A512638384C007034A6 /* ViewController.swift in Sources */,
+				DDC02A7126384D38007034A6 /* Email.swift in Sources */,
 				DDC02A4D2638384C007034A6 /* AppDelegate.swift in Sources */,
 				DDC02A4F2638384C007034A6 /* SceneDelegate.swift in Sources */,
+				DDC02A6E26384D1C007034A6 /* GmailResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDC02A6926384CBA007034A6 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDC02A6A26384CBA007034A6 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDC02A6926384CBA007034A6 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDC02A412638384C007034A6 /* Project object */;
 }
